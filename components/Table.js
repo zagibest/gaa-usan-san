@@ -6,9 +6,6 @@ export default function Gtable(props) {
     props.setIsShow(isShow);
     props.setSelectUser(user);
   };
-  const addAttendance = (user) => {
-    props.setPresent(user);
-  };
 
   return (
     <Tr>
@@ -29,7 +26,7 @@ export default function Gtable(props) {
       </Td>
 
       <Td>
-        <Checkbox onChange={() => addAttendance(props)} />
+        <Checkbox />
       </Td>
     </Tr>
   );
