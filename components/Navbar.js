@@ -2,7 +2,7 @@ import { Box, Button, Text } from "@chakra-ui/react";
 import { useUser } from "@/lib/firebase/useUser";
 
 export default function Navbar() {
-  const { user, logout } = useUser();
+  const { logout } = useUser();
   return (
     <Box
       w="100%"
