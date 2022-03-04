@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Gtable from "@/components/Table";
 import { FaSearch, FaPlus } from "react-icons/fa";
 import { db } from "@/lib/firebase/initFirebase";
-import { doc, getDocs, collection, onSnapshot } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import {
   Button,
@@ -29,7 +29,6 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
-import UserPro from "@/components/userPro";
 
 export default function Home() {
   const { user } = useUser();
@@ -102,7 +101,7 @@ export default function Home() {
               <Input
                 placeholder="Хайх"
                 w="40"
-                borderColor="blue.100"
+                borderColor="gray.400"
                 onChange={(event) => {
                   setSearchTerm(event.target.value);
                 }}
